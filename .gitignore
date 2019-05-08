@@ -1,0 +1,14 @@
+*.root*
+*.pdf
+*.png
+output/*
+*.pyc
+*.tex
+*.sh
+*.log
+*.aux
+*.nav
+*.out
+*.snm
+*.toc
+*/templates/*
