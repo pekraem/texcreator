@@ -18,6 +18,7 @@ def getPlotFromPaths(pathList, filetype=".png"):
                 if not path.endswith("/"): path+="/"
                 if filename.endswith(filetype):
                     plotList.append(str(path+filename))
+            plotList.sort()
             listOfPlotLists.append(plotList)
     return listOfPlotLists
 
@@ -55,7 +56,7 @@ def include2PlotsFrom2Lists(listOfPlotLists, w1=0.49, w2=0.49, i=0, j=1):
     while len(orderedList)<len(listOfPlotLists[i]):
         for p1 in listOfPlotLists[i]:
             for p2 in listOfPlotLists[j]:
-                if p1.split("/")[-1]==p2.split("/")[-1]:
+                #if p1.split("/")[-1]==p2.split("/")[-1]:
                     orderedList.append(p2)
     for p1, p2 in zip(listOfPlotLists[i],orderedList):
         inclGraphList.append(str("\\includegraphics[width={}\\textwidth]{}\n\t\\includegraphics[width={}\\textwidth]{}\\\\".format(w1,str("{"+p1+"}"),w2,str("{"+p2+"}"))))

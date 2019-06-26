@@ -43,7 +43,7 @@ color           = color.KITColor()
 cmds            = command.usefulCommands()
 hypersetup      = hypersetup.hypersetup()
 
-style           = "2Plot"
+style           = "2Plot2List"
 # style options are (at the moment):
     # "1Plot"       : creates slides with only 1 plot on each frame
     # "2Plot"       : creates slides with 2 plots on each frame (l1[p1]*l1[p2]...ln[p(n-1)]*ln[pn]))
@@ -55,12 +55,12 @@ for x in title:
 
 
 ## paths
-path    = "/home/pkraemer/Documents/STXS_Plots/002_Stage0_firstPlots/"
-p1      = "controlPlots/plots"
-p2      = "controlPlots_Log/plots"
+path    = "/home/mhorzela/presentation/figures/ATLASCMS_GENplots/"
+p1      = "4j4b"
+p2      = "4j3b"
 
 # sourcePathList is the List with the important source paths, the others are only to build it
-sourcePathList = [path+p1, path+p2]
+sourcePathList = [path+p1,path+p2]
 
 # path to the directory where the outputfiles are created
 outPath = basedir + "/output/"
